@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8" />
+   <title>index.php</title>
+</head>
+<body>
+    <?php
+        session_start();  // 啟用交談期
+        // 檢查Session變數是否存在, 表示是否已成功登入
+        if ( $_SESSION["login_session"] == true ) 
+            header("Location: main.php");
+        else
+            header("Location: login.php");
+   ?>
+</body>
+</html>
